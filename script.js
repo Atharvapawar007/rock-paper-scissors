@@ -1,4 +1,4 @@
-console.log("Hello World");
+console.log("Hello Guys! let's play the rock-paper-scissors game!");
 
 function getComputerChoice(){
     const randomNumber = Math.floor(Math.random() * 100);
@@ -18,13 +18,11 @@ function getHumanChoice(){
     return humanChoice.toLowerCase();
 }
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-
 let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
+    console.log(`Human Choice: ${humanChoice} || Computer Choice: ${computerChoice}`);
     switch(humanChoice){
         case "rock":
             if(computerChoice === "rock"){
@@ -62,7 +60,19 @@ function playRound(humanChoice, computerChoice){
             }
             break;
     }
+}
 
+for(i = 1; i <= 5; i++){
+    console.log(`Round ${i}`);
+    playRound(getHumanChoice(), getComputerChoice());
     console.log(`Human Score : ${humanScore} || Computer Score : ${computerScore}`);
+}
+
+if(humanScore == computerScore){
+    console.log('The Game is Tied');
+}else if(humanScore > computerScore){
+    console.log('Human Wins!');
+}else{
+    console.log('Computer Wins!');
 }
 
