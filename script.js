@@ -12,3 +12,8 @@ function getComputerChoice(){
     }
 }
 
+function getHumanChoice(){
+    const humanChoice = prompt("Enter one option out of 'Rock', 'Paper' or 'Scissors' ");
+
+    return humanChoice.toLowerCase();
+}
