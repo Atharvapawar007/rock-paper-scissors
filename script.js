@@ -31,8 +31,10 @@ function playRound(humanChoice, computerChoice){
                 console.log("It's a tie!");
             }else if(computerChoice === "paper"){
                 console.log("Computer wins!");
+                computerScore++;
             }else{
                 console.log("Human wins!");
+                humanScore++;
             }
             break;
 
@@ -41,8 +43,10 @@ function playRound(humanChoice, computerChoice){
                 console.log("It's a tie!");
             }else if(computerChoice === "scissors"){
                 console.log("Computer wins!");
+                computerScore++;
             }else{
                 console.log("Human wins!");
+                humanScore++;
             }
             break;
 
@@ -51,8 +55,10 @@ function playRound(humanChoice, computerChoice){
                 console.log("It's a tie!");
             }else if(computerChoice === "rock"){
                 console.log("Computer wins!");
+                computerScore++;
             }else{
                 console.log("Human wins!");
+                humanScore++;
             }
             break;
     }
