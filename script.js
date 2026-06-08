@@ -71,8 +71,8 @@ for(i = 1; i <= 5; i++){
 if(humanScore == computerScore){
     console.log('The Game is Tied');
 }else if(humanScore > computerScore){
-    console.log('Human Wins!');
+    console.log('Final Winner: Human');
 }else{
-    console.log('Computer Wins!');
+    console.log('Final Winner: Computer');
 }
 
