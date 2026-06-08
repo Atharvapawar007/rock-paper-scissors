@@ -17,3 +17,46 @@ function getHumanChoice(){
 
     return humanChoice.toLowerCase();
 }
+
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+    switch(humanChoice){
+        case "rock":
+            if(computerChoice === "rock"){
+                console.log("It's a tie!");
+            }else if(computerChoice === "paper"){
+                console.log("Computer wins!");
+            }else{
+                console.log("Human wins!");
+            }
+            break;
+
+        case "paper":
+            if(computerChoice === "paper"){
+                console.log("It's a tie!");
+            }else if(computerChoice === "scissors"){
+                console.log("Computer wins!");
+            }else{
+                console.log("Human wins!");
+            }
+            break;
+
+        case "scissors":
+            if(computerChoice === "scissors"){
+                console.log("It's a tie!");
+            }else if(computerChoice === "rock"){
+                console.log("Computer wins!");
+            }else{
+                console.log("Human wins!");
+            }
+            break;
+    }
+
+    console.log(`Human Score : ${humanScore} || Computer Score : ${computerScore}`);
+}
+
