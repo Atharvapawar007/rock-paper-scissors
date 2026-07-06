@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <style>
         *{
             padding: 0;
             margin: 0;
-            background-color: black;
         }
 
         .container{
@@ -19,17 +18,58 @@
             align-items: center;
         }
 
-        p{
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            font-size: 30px;
+        .sub-container{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .header{
             text-align: center;
+        }
+
+        .button-container{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+
+        .score-container{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .choice-container{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        button{
+            font-size: 30px;
+            padding: 10px 20px;
+            border-radius: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <p>Enter "Rock", "Paper" or "Scissors" for 5 rounds <br> and see the results on the DevTools console</p>
+        <div class="sub-container">
+            <div class="header"><h2>Select one of three choices</h2></div>
+            <div class="button-container">
+                <button class="rock">Rock</button>
+                <button class="paper">Paper</button>
+                <button class="scissors">Scissors</button>
+            </div>
+            <div class="choice-container">
+                <p>Human Choice: <span class="humanChoice"></span></p>
+                <p>Computer Choice: <span class="computerChoice"></span></p>
+            </div>
+            <div class="score-container">
+                <p>Human Score: <span class="humanScore">0</span></p>
+                <p>Computer Score: <span class="computerScore">0</span></p>
+            </div>
+            <p class="winner" style="text-align: center;"></p>
+        </div>
     </div>
 </body>
 </html>
