@@ -92,5 +92,3 @@ function playRound(Hchoice, Cchoice){
     humanScore.innerText = `${Hscore}`;
     computerScore.innerText = `${Cscore}`;
 }
-
-
